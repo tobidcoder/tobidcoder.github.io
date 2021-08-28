@@ -1,0 +1,31 @@
+
+  git remote add github repoUrl
+  git push --mirror github
+  
+install typeorm globally
+$ npm i -g typeorm
+
+generate your migrationfile from your already created schemas
+$ npm run typeorm migration:generate -- -n migrationNameHere
+
+run migration
+$ npm run migration
+$ npm run typeorm migration:run
+
+@CreateDateColumn({
+    type: 'timestamp',
+    default: () => 'CURRENT_TIMESTAMP(6)',
+  })
+  created_at: Date;
+
+  @UpdateDateColumn({
+    type: 'timestamp',
+    default: () => 'CURRENT_TIMESTAMP(6)',
+    onUpdate: 'CURRENT_TIMESTAMP(6)',
+  })
+  updated_at: Date;
+
+
+  
+  php artisan infyom:api Userkkk --fromTable --tableName=usersjjk
+php artisan make:migration add_paid_to_users_table --table=usersss
